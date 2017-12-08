@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.dell.jd.view.XQActivity">
+   <include layout="@layout/title1"></include>
+    <com.youth.banner.Banner
+        android:layout_gravity="center"
+        android:id="@+id/xqbanner"
+        android:layout_width="300dp"
+        android:layout_height="400dp"></com.youth.banner.Banner>
+    <TextView
+           android:id="@+id/xqbiaoti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/xqprcie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/addcart"
+            android:layout_weight="1"
+            android:text="添加购物车"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

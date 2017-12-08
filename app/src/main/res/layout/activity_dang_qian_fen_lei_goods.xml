@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.dell.jd.view.DangQianFenLeiGoodsActivity">
+    <include layout="@layout/title"></include>
+     <LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="综合"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         <TextView
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="销量"
+             android:textColor="#f23"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         <TextView
+             android:layout_weight="1"
+             android:text="价格"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         <TextView
+             android:layout_weight="1"
+             android:text="筛选"
+             android:gravity="center"
+             android:textColor="#f23"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+     </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:text="京东配送"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:text="新品"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:text="品牌"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:text="前置拍摄"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/showrlv"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+</LinearLayout>
