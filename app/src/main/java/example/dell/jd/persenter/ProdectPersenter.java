@@ -32,6 +32,7 @@ public class ProdectPersenter {
         prodectModel.getProdect("http://120.27.23.105/product/getCatagory?", new CGSB<ProdectBean>() {
             @Override
             public void chengGong(ProdectBean prodectBean) {
+
                 List<ProdectBean.DataBean> list = prodectBean.getData();
 
                 iProdect.showData(list);

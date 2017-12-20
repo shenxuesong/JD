@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <LinearLayout
 
-    android:orientation="vertical"
+    <RelativeLayout
+       android:background="#fff"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-   <include layout="@layout/title"></include>
+    <ScrollView
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:id="@+id/sv"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <FrameLayout
             android:id="@+id/fg"
@@ -27,17 +33,226 @@
          android:id="@+id/lb"
          android:layout_width="match_parent"
          android:layout_height="200dp">
+
      </com.youth.banner.Banner>
    `
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/tuyi1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1">
+
+                </com.facebook.drawee.view.SimpleDraweeView>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/tuer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+
+                    android:layout_weight="1">
+
+                </com.facebook.drawee.view.SimpleDraweeView>
+            </LinearLayout>
     <android.support.v7.widget.RecyclerView
+
     android:id="@+id/SYrlv"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="30dp"
     android:layout_height="wrap_content">
 
-</android.support.v7.widget.RecyclerView>
+    </android.support.v7.widget.RecyclerView>
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#f23"
+                    android:text="京东"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:src="@drawable/sele1"/>
+                <!--跑马灯-->
+                <ViewFlipper
+                    android:id="@+id/view_flipper"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:flipInterval="2000">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:text="爆"
+                            android:textColor="#FF0000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="荣耀 V10竟然这么快！"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="热门"
+                            android:textColor="#FF0000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="沈 阔，沈 翔 真 棒！"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="深夜发媸：最小题大做的美妆"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HOT"
+                            android:textColor="#FF0000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="戴上这副骚耳机，Beats都哭了"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HOT"
+                            android:textColor="#FF0000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上千的耐克鞋拆开是啥样？"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="爆"
+                            android:textColor="#FF0000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="打呼噜竟然和枕头有关？"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="推荐"
+                            android:textColor="#FF0000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="福特复仇法拉利？50年不死不休"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="推荐"
+                            android:textColor="#FF0000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="余文乐，行走的潮流教科书"/>
+
+                    </LinearLayout>
+
+                </ViewFlipper>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:paddingLeft="20dp"/>
+
+            </LinearLayout>
+
     <!--活动-->
     <LinearLayout
         android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -46,192 +261,88 @@
             android:text="热门活动"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <TextView
 
-            android:id="@+id/time"
-            android:textSize="15dp"
-            android:layout_marginLeft="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
     </LinearLayout>
-
+  <!--秒杀的类内容-->
     <LinearLayout
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:textColor="#000"
-            android:text="京东"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:src="@drawable/sele1"/>
-       <!--文字的滚动切换-->
-        <ViewFlipper
-            android:id="@+id/view_flipper"
-            android:layout_width="0dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:flipInterval="2000">
-
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:textSize="15dp"
-                    android:text="爆"
-                    android:textColor="#FF0000"/>
-
-                <TextView
-                    android:layout_marginLeft="10dp"
+                    android:text="秒杀："
+                    android:textColor="#f23"
+                    android:layout_marginLeft="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="荣耀 V10竟然这么快！"/>
+                    android:layout_height="wrap_content" />
+                <TextView
 
+                    android:id="@+id/time"
+                    android:background="#000"
+                    android:textSize="15dp"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/msrlv"
+                android:layout_width="match_parent"
 
-            <LinearLayout
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="#FF088B9C"
+                android:text="发现好货"
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#000"
+                android:layout_marginTop="5dp"
+                android:text="邂逅好物 发现理想生活"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+             <LinearLayout
+                 android:orientation="horizontal"
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <com.facebook.drawee.view.SimpleDraweeView
+                     android:id="@+id/tuyi"
+                     android:layout_width="100dp"
+                     android:layout_height="100dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="热门"
-                    android:textColor="#FF0000"/>
+                 </com.facebook.drawee.view.SimpleDraweeView>
+                 <com.facebook.drawee.view.SimpleDraweeView
+                     android:id="@+id/tuer"
+                     android:layout_marginLeft="7dp"
+                     android:layout_width="100dp"
+                     android:layout_height="100dp">
 
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="沈 阔，沈 翔 真 棒！"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="深夜发媸：最小题大做的美妆"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HOT"
-                    android:textColor="#FF0000"/>
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="戴上这副骚耳机，Beats都哭了"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HOT"
-                    android:textColor="#FF0000"/>
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="上千的耐克鞋拆开是啥样？"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="爆"
-                    android:textColor="#FF0000"/>
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="打呼噜竟然和枕头有关？"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="推荐"
-                    android:textColor="#FF0000"/>
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="福特复仇法拉利？50年不死不休"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="推荐"
-                    android:textColor="#FF0000"/>
-
-                <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="余文乐，行走的潮流教科书"/>
-
-            </LinearLayout>
-
-        </ViewFlipper>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="|"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="更多"
-            android:paddingLeft="20dp"/>
-
+                 </com.facebook.drawee.view.SimpleDraweeView>
+             </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 
@@ -239,6 +350,7 @@
 
 
          <com.facebook.drawee.view.SimpleDraweeView
+
             android:layout_marginTop="5dp"
             android:id="@+id/sdv2"
             fresco:placeholderImage="@mipmap/ic_launcher"
@@ -258,12 +370,21 @@
               android:text="---------  为您推荐----------"
               android:layout_width="match_parent"
               android:layout_height="wrap_content" />
-        <com.jcodecraeer.xrecyclerview.XRecyclerView
-            android:id="@+id/tjrlv"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/tjrlv"
 
-        </com.jcodecraeer.xrecyclerview.XRecyclerView>
-</LinearLayout>
-</ScrollView>
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--搜索框-->
+
+
+        <include layout="@layout/title2"></include>
+
+</RelativeLayout>

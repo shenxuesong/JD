@@ -1,13 +1,15 @@
 package example.dell.jd.view;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.umeng.socialize.UMAuthListener;
@@ -48,6 +50,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private RegPersenter regPersenter;
     private int uid;
     private int id;
+    private TextView fin;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
         initView();
         regPersenter = new RegPersenter(this);
+       //记录是不是第一次登陆
+        SharedPreferences sharedPreferences = getSharedPreferences("ljq", Context.MODE_PRIVATE);
+        boolean flags = sharedPreferences.getBoolean("flags", false);
+        //获取编辑器
+        editor = sharedPreferences.edit();
+         /*   if(!flags){
+                //说明不是第一次进入
+                //传值给详情页和购物车
+                int uid1 = sharedPreferences.getInt("uid",0);
+
+                EventBus.getDefault().postSticky(new MessageEvent1(uid1 +""));
+            }*/
 
     }
 
@@ -69,6 +85,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mWeixin.setOnClickListener(this);
         mQq = (ImageView) findViewById(R.id.qq);
         mQq.setOnClickListener(this);
+        fin = findViewById(R.id.finish);
+        fin.setOnClickListener(this);
+
     }
 
     @Override
@@ -82,7 +101,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     regPersenter.getLogin(mEtSj.getText().toString().trim(), mEtMm.getText().toString().trim());
 
                 //登陆成功跳转
-                startActivity(new Intent(LoginActivity.this, ShowGoodsActivity.class));
+                Intent intent = new Intent(LoginActivity.this, ShowGoodsActivity.class);
+                intent.putExtra("ip","1");
+
+                startActivity(intent);
 
 
                 break;
@@ -104,6 +126,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 UMShareAPI.get(LoginActivity.this).doOauthVerify(LoginActivity.this, SHARE_MEDIA.QQ, authListener);
 
                 Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.finish:
+                finish();
                 break;
         }
     }
@@ -198,8 +223,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void ShowStr(String s, LoginBean.DataBean data) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
         uid = data.getUid();
-        Log.i("UID",uid+"");
-        //传值给详情页和购物车
-        EventBus.getDefault().postSticky(new MessageEvent1(uid+""));
+        //Log.i("UID",uid+"");
+        EventBus.getDefault().postSticky(new MessageEvent1(uid +""));
+        editor.putInt("uid", uid);
+        editor.putBoolean("flags",true);
+        editor.commit();//提交修改
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
+
+    }
+
 }

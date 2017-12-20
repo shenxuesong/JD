@@ -1,11 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:background="#fff223"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dlayout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ListView
-        android:id="@+id/lv"
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title2"></include>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="综合"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="销量"
+            android:textColor="#f23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/px"
+            android:layout_weight="1"
+            android:text="价格"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:text="筛选"
+             android:id="@+id/saixuan"
+            android:gravity="center"
+            android:textColor="#f23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:text="京东配送"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:text="新品"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:text="品牌"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:text="前置拍摄..."
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+  <!--  <me.maxwin.view.XListView
+    android:id="@+id/lv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</me.maxwin.view.XListView>-->
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/lv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
 </LinearLayout>
+
+    <ListView
+        android:layout_gravity="right"
+        android:id="@+id/cllv"
+        android:layout_width="200dp"
+        android:layout_height="match_parent">
+
+    </ListView>
+</android.support.v4.widget.DrawerLayout>

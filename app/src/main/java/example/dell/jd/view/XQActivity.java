@@ -3,7 +3,6 @@ package example.dell.jd.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -29,6 +28,9 @@ import example.dell.jd.persenter.AddCartPersenter;
 import example.dell.jd.persenter.GoodsXQPersenter;
 import example.dell.jd.ydyBanner.GlideImageLoader;
 
+/**
+ *详情页面
+ */
 public class XQActivity extends AppCompatActivity implements IGoodsXQActivity, View.OnClickListener ,IAddCart<AddCart>{
 
     private GoodsXQPersenter goodsXQPersenter;
@@ -71,7 +73,7 @@ public class XQActivity extends AppCompatActivity implements IGoodsXQActivity, V
     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
     public void onMess(MessageEvent1 event) {
         uid = event.getUid();
-        Log.i("ww1",uid);
+    //    Log.i("ww1",uid);
 
 
 
@@ -88,16 +90,19 @@ public class XQActivity extends AppCompatActivity implements IGoodsXQActivity, V
         GoodsXQBean.DataBean data = goodsXQBean.getData();
 
         String images = data.getImages();
-        String[] split = images.split("\\|");
-        for (int i = 0; i <split.length; i++) {
-            String s = split[i];
-            list.add(s);
+        if(images!=null){
+            String[] split = images.split("\\|");
+            for (int i = 0; i <split.length; i++) {
+                String s = split[i];
+                list.add(s);
+            }
         }
+
        mXqbanner.setImages(list).setImageLoader(new GlideImageLoader()).setDelayTime(1000).isAutoPlay(true).start();
 
         mBaoti.setText("商品详情页面");
         mXqbiaoti.setText(data.getTitle());//商品的标题
-        mXqprcie.setText("京东价："+data.getPrice());
+        mXqprcie.setText("￥："+data.getPrice());
     }
 
     private void initView() {

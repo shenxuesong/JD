@@ -31,7 +31,7 @@ public class TuiJianRelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.recitem, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.tuijianrecitem, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -48,7 +48,8 @@ public class TuiJianRelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         String title = listBean.getTitle();
         double price = listBean.getPrice();
 
-        vh.tv.setText(title+"\n"+"京东价："+price);
+        vh.tv.setText(title);
+        vh.tvprice.setText("￥："+price);
         vh.ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,13 +64,14 @@ public class TuiJianRelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
     class MyViewHolder extends RecyclerView.ViewHolder{
          SimpleDraweeView sdv;
-         TextView tv;
+         TextView tv,tvprice;
          LinearLayout ll;
         public MyViewHolder(View itemView) {
             super(itemView);
-            tv= itemView.findViewById(R.id.bt);
-            sdv=itemView.findViewById(R.id.sdv);
-            ll=itemView.findViewById(R.id.lin);
+            tv= itemView.findViewById(R.id.tuibt);
+            tvprice= itemView.findViewById(R.id.tuiprice);
+            sdv=itemView.findViewById(R.id.tuisdv);
+            ll=itemView.findViewById(R.id.tuilin);
         }
     }
 

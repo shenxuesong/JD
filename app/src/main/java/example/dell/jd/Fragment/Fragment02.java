@@ -80,7 +80,7 @@ public class Fragment02 extends Fragment implements IProdect{
 
     @Override
     public void showData(final List<ProdectBean.DataBean> list) {
-        mRvLeft.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRvLeft.setLayoutManager(new LinearLayoutManager(getActivity()));
         RelAdapter1 relAdapter = new RelAdapter1(list, getActivity());
         mRvLeft.setAdapter(relAdapter);
          relAdapter.setOnItemClickLitener(new RelAdapter1.OnItemClickLitener() {

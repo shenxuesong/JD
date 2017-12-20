@@ -9,6 +9,7 @@ import example.dell.jd.model.SelectGoodsModel;
 import example.dell.jd.net.CGSB;
 
 /**
+ * 搜索商品的
  * Created by Dell on 2017/12/2.
  */
 
@@ -24,8 +25,8 @@ public class SelectGoodsPersenter {
 
 
     }
-    public void getProdect(String s){
-        selectGoodsModel.getProdect("http://120.27.23.105/product/searchProducts?keywords=" + s + "&page=1&", new CGSB<SelectGoodsBean>() {
+    public void getProdect(String s,int i){
+        selectGoodsModel.getProdect("http://120.27.23.105/product/searchProducts?keywords=" + s + "&page="+i+"&", new CGSB<SelectGoodsBean>() {
             @Override
             public void chengGong(SelectGoodsBean selectGoodsBean) {
                 List<SelectGoodsBean.DataBean> list = selectGoodsBean.getData();

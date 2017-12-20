@@ -8,11 +8,15 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk { //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+             abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","arm64-v8a","x86_64" }
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [eventBusIndex: 'example.dell.jd.MyEventBusIndex']
             }
+
         }
 
     }
@@ -28,7 +32,6 @@ android {
 }
 
 dependencies {
-
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -61,5 +64,8 @@ dependencies {
     compile 'fm.jiecao:jiecaovideoplayer:4.8.3'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.zhy:base-adapter:3.0.3'
-
+    implementation files('libs/alipaySdk-20170922.jar')
+    compile 'com.github.ForgiveAll:Xlistview:v1.0'
+    compile files('libs/AMap3DMap_5.5.0_AMapNavi_5.4.0_AMapSearch_5.5.0_AMapLocation_3.6.1_20171107.jar')
+    compile fileTree(dir: 'libs', include: ['*.jar']) //3D地图so及jar compile 'com.amap.api:3dmap:latest.integration' //定位功能 compile 'com.amap.api:location:latest.integration' //搜索功能 compile 'com.amap.api:search:latest.integration'
 }

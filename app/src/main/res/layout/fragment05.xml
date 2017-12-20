@@ -34,11 +34,11 @@
             android:layout_marginLeft="160dp"
             android:background="@drawable/sz" />
         <ImageView
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="20dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/msg_hei" />
+            android:background="@drawable/my_msg_bai" />
     </LinearLayout>
 
     <LinearLayout

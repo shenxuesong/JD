@@ -17,14 +17,20 @@ import example.dell.jd.Fragment.Fragment04;
 import example.dell.jd.Fragment.Fragment05;
 import example.dell.jd.R;
 
+/**
+ *
+ */
 public class ShowGoodsActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
    private ViewPager vp;
    private RadioGroup rg;
   private List<Fragment> list=new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_goods);
+
         //查找组件
         vp=(ViewPager)findViewById(R.id.vp);
         rg=(RadioGroup)findViewById(R.id.rg);
@@ -113,4 +119,16 @@ public class ShowGoodsActivity extends AppCompatActivity implements RadioGroup.O
                 break;
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+      vp.setCurrentItem(4);
+
+
+    }
+
+
+
 }

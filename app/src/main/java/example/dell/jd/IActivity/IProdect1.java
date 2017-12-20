@@ -12,4 +12,5 @@ import example.dell.jd.Bean.ProdectBean;
 public interface IProdect1 {
      void showData(List<ProdectBean.DataBean> list);
       void showBean(LunBoTuBean lunBoTuBean);
+
 }

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="#00000000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
-
         android:fitsSystemWindows="true"
         android:id="@+id/ll_nest_toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
 
         <android.support.v7.widget.Toolbar
             android:fitsSystemWindows="true"
@@ -16,6 +16,7 @@
             android:layout_height="?android:actionBarSize"
             android:layout_width="match_parent"
             >
+
             <LinearLayout
 
                 android:id="@+id/ll_head"
@@ -47,7 +48,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:padding="5dp"
-                    android:background="@drawable/search_bg"
+                    android:background="#fff"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:gravity="center_vertical"

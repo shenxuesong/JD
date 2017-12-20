@@ -23,7 +23,7 @@ public class CartPersenter {
 
 
     }
-    public void getMP(String uid){
+    public void getCart(String uid){
       cartModel.getGoods("http://120.27.23.105/product/getCarts?uid=" + uid + "&", new CGSB<CartBean>() {
           @Override
           public void chengGong(CartBean cartBean) {

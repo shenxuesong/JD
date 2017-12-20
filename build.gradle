@@ -22,7 +22,7 @@ allprojects {
         google()
         maven { url "https://jitpack.io" }
         jcenter()
-
+        maven{url'https://jitpack.io'}
 
     }
 

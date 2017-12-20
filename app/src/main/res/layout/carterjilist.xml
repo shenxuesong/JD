@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/jian"
+                    android:id="@+id/jia"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/shopcart_add_red" />
@@ -60,10 +60,10 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="2dp"
-                    android:text="1" />
+                    android:text="1" />n
 
                 <ImageView
-                    android:id="@+id/jia"
+                    android:id="@+id/jian"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="5dp"

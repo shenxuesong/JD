@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.umeng.socialize.utils.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +17,9 @@ import example.dell.jd.IActivity.IDangQianActivity;
 import example.dell.jd.R;
 import example.dell.jd.persenter.DangQianPersenter;
 
+/**
+ * 当前子分类下的商品列表（分页）
+ */
 public class DangQianFenLeiGoodsActivity extends AppCompatActivity implements IDangQianActivity{
 
     private DangQianPersenter dangQianPersenter;
@@ -45,7 +47,7 @@ public class DangQianFenLeiGoodsActivity extends AppCompatActivity implements ID
     @Override
     public void ShowBean(DangQianGoodsBean dangQianGoodsBean) {
         list = dangQianGoodsBean.getData();
-        Log.i("Goods", list.size()+"");
+   //     Log.i("Goods", list.size()+"");
       xRlv.setLayoutManager(new LinearLayoutManager(this));
         dqRelAdapter = new DQRelAdapter(list, this);
         xRlv.setAdapter(dqRelAdapter);

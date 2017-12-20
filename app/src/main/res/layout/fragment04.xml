@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#fff"
     android:layout_height="match_parent">
-    <example.dell.jd.view.MyExpanableListView
+    <ScrollView
         android:layout_weight="1"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <example.dell.jd.view.MyExpanableListView
+
         android:id="@+id/cartlistview"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </example.dell.jd.view.MyExpanableListView>
 
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:textColor="#000"
+        android:text="---------  为您推荐----------"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/rrrlv"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+        </LinearLayout>
+    </ScrollView>
     <LinearLayout
         android:layout_weight="9"
         android:orientation="horizontal"
@@ -48,26 +76,13 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-        <TextView
+        <Button
             android:text="去结算"
+            android:id="@+id/jiesuan"
+            android:textColor="#fff"
             android:background="#FFD82020"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="130dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
-    <TextView
-        android:textSize="15dp"
-        android:gravity="center_horizontal"
-        android:textColor="#000"
-        android:text="---------  为您推荐----------"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <com.jcodecraeer.xrecyclerview.XRecyclerView
-        android:id="@+id/rrrlv"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </com.jcodecraeer.xrecyclerview.XRecyclerView>
 </LinearLayout>
-</ScrollView>

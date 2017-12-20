@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:background="#00000000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:id="@+id/ll_nest_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:fitsSystemWindows="true"
+            android:id="@+id/tool_head"
+            android:layout_height="?android:actionBarSize"
+            android:layout_width="match_parent"
+            >
+
+            <LinearLayout
+
+                android:id="@+id/ll_head"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:id="@+id/ll_sao"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:id="@+id/iv_sao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:src="@drawable/sys"
+                        />
+                    <TextView
+                        android:id="@+id/tv_sao"
+                        android:paddingTop="3dp"
+                        android:textSize="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="扫啊扫"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:background="#fff"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="30dp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/search_icon2"
+                        />
+                    <EditText
+                        android:id="@+id/selcontent"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:background="@null"
+                        android:layout_width="0dp"
+                        android:textSize="12sp"
+                        android:layout_height="wrap_content"
+                        android:hint="都市丽人领劵满399减200"
+                        />
+                    <ImageView
+                        android:id="@+id/selBut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/root"
+                        />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:id="@+id/ll_mm"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pack"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:id="@+id/ll_msg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                    <CheckBox
+                        android:button="@null"
+                        android:id="@+id/iv_msg"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/item2"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

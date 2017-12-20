@@ -10,14 +10,34 @@
     <com.youth.banner.Banner
         android:layout_gravity="center"
         android:id="@+id/xqbanner"
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="400dp"></com.youth.banner.Banner>
-    <TextView
-           android:id="@+id/xqbiaoti"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#fff"
+            android:text="自营"
+            android:background="#f23"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/xqbiaoti"
+               android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/xqprcie"
+        android:textColor="#f23"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <LinearLayout
@@ -29,6 +49,9 @@
         <Button
             android:id="@+id/addcart"
             android:layout_weight="1"
+            android:background="#f23"
+            android:textColor="#fff"
+            android:textSize="20dp"
             android:text="添加购物车"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
