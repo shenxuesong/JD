@@ -307,8 +307,8 @@ public class CartEJAdapter extends BaseExpandableListAdapter {
      */
     private void changeChildState(int grouPistion,boolean flag){
         List<CartBean.DataBean.ListBean> listBeen = childlist.get(grouPistion);
-        for (int i = 0; i < listBeen.size(); i++) {
-            listBeen.get(i).setCheck(flag);
+            for (int i = 0; i < listBeen.size(); i++) {
+                listBeen.get(i).setCheck(flag);
         }
     }
     /**
